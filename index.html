@@ -1,19 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Geo Sistemas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; background: #f2f2f2; color: #333; text-align: center; padding: 50px; }
-        h1 { color: #005c99; }
-        p { font-size: 1.2em; }
-        footer { margin-top: 50px; font-size: 0.9em; color: #666; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo-Sistemas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      margin: 5px 0 0;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #002244;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #003366;
+      color: white;
+      margin-top: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 80px;
+      height: auto;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenido a Geo Sistemas</h1>
-    <p>Próximamente encontrarás aquí toda nuestra información técnica y comercial.</p>
-    <footer>&copy; 2025 Geo Sistemas</footer>
+  <header>
+    <h1>Geo-Sistemas</h1>
+    <p>Conectividad donde otros no llegan</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="planes.html">Planes</a>
+    <a href="https://bills25.ispcube.com/" target="_blank">Descargar Facturas</a>
+    <a href="privacidad.html">Política de Privacidad</a>
+    <a href="terminos.html">Términos y Condiciones</a>
+  </nav>
+
+  <section>
+    <h2>Sobre Nosotros</h2>
+    <p>Geo-Sistemas es una empresa argentina dedicada a brindar <strong>servicios de Internet inalámbrico</strong> con tecnología Mikrotik, especializada en conectar zonas rurales y urbanas con soluciones eficientes, estables y personalizadas.</p>
+    <p>Contamos con infraestructura propia que incluye torres, sistemas energéticos autónomos, enlaces dedicados y soporte técnico local. Operamos desde el año 2003, ofreciendo servicios de telecomunicaciones bajo CUIT <strong>20-25887269-0</strong>.</p>
+  </section>
+
+  <section>
+    <h2>Servicios</h2>
+    <ul>
+      <li>Internet inalámbrico punto a punto y multipunto</li>
+      <li>Redes privadas para empresas</li>
+      <li>Conectividad rural de alta disponibilidad</li>
+      <li>Soporte técnico local</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Galería de Servicios</h2>
+    <div class="gallery">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747393.png" alt="Antena">
+      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942809.png" alt="Conectividad">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712106.png" alt="Soporte Técnico">
+    </div>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p><strong>Email:</strong> administracion@geo-sistemas.com.ar</p>
+    <p><strong>Teléfono:</strong> +54 263 154418532</p>
+    <p><strong>Dirección:</strong> Calle Fernández 649, Ciudad de San Martín, Mendoza, Argentina</p>
+    <p><strong>Horario de atención:</strong> Lunes a viernes de 9:00 a 19:00 hs (cerrado fines de semana y feriados)</p>
+  </section>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/54263154418532?text=Hola%2C+quisiera+hacer+una+consulta+sobre+los+servicios+de+Geo-Sistemas" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2003–2025 Geo-Sistemas. CUIT: 20-25887269-0</p>
+    <p><a href="privacidad.html" style="color:white;">Política de Privacidad</a> | <a href="terminos.html" style="color:white;">Términos y Condiciones</a></p>
+  </footer>
 </body>
 </html>
