@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Servicio suspendido | Portal de aviso</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #ef4444;
+      --accent-2: #f59e0b;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --ok: #10b981;
+      --btn: #1f2937;
+      --btn-hover: #374151;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(239,68,68,.12), transparent 60%) ,
+                  radial-gradient(900px 500px at 90% 90%, rgba(245,158,11,.10), transparent 60%) ,
+                  var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      line-height: 1.45;
+    }
+    .card {
+      width: min(920px, 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      background: linear-gradient(90deg, rgba(239,68,68,.17), rgba(245,158,11,.14));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    header img {
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: #00000022;
+    }
+    header .brand {
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    header .badge {
+      margin-left: auto;
+      font-size: 12px;
+      background: rgba(239,68,68,.18);
+      border: 1px solid rgba(239,68,68,.55);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #fecaca;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+    main { padding: 28px 20px 20px; }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 3.2vw, 34px);
+      line-height: 1.15;
+      letter-spacing: .2px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: clamp(15px, 2.1vw, 18px);
+      margin-bottom: 18px;
+    }
+    .monos {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .95em;
+      color: #cbd5e1;
+      background: #0b1220;
+      border: 1px solid rgba(255,255,255,.07);
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1.2fr .8fr; }
+    }
+    .panel {
+      background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .ctas {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .btn {
+      appearance: none;
+      border: 0;
+      background: var(--btn);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .02s ease, background .15s ease, opacity .15s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn:hover { background: var(--btn-hover); }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: #b91c1c; }
+    .btn-primary:hover { background: #991b1b; }
+    .btn-ok { background: var(--ok); }
+    .btn-ok:hover { filter: brightness(.92); }
+    .hint { color: var(--muted); font-size: 13px; margin-top: 6px; }
+    .list { margin: 0; padding-left: 20px; }
+    footer {
+      padding: 14px 18px 18px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .tag { background: rgba(255,255,255,.06); padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.08); }
+    code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Aviso de servicio suspendido">
+    <header>
+      <img id="logo" alt="Logo">
+      <div class="brand" id="brand">Tu Empresa</div>
+      <div class="badge" aria-live="polite">Servicio suspendido</div>
+    </header>
+    <main>
+      <div class="grid">
+        <section class="panel">
+          <h1>Su servicio se encuentra <span style="color:var(--accent)">suspendido</span> por <strong>falta de pago</strong>.</h1>
+          <p class="lead">Para restablecer la conexión, regularice su saldo y aguarde la reconexión automática.</p>
+
+          <div id="datosCliente" class="hint" style="display:none; margin-bottom:10px;"></div>
+
+          <div class="ctas">
+            <a id="btnPagar" class="btn btn-primary" href="#" target="_blank" rel="noopener">Pagar ahora</a>
+            <button id="btnReintentar" class="btn btn-ok">Ya pagué, reintentar conexión</button>
+            <a id="btnSoporte" class="btn" href="#" target="_blank" rel="noopener">Contactar soporte</a>
+          </div>
+          <div class="hint">
+            Si ya abonó, la reconexión puede demorar unos minutos. Puede cerrar y volver a abrir el navegador o presionar <strong>Reintentar</strong>.
+          </div>
+        </section>
+
+        <aside class="panel" aria-label="Información técnica">
+          <h3 style="margin:0 0 8px">Información</h3>
+          <ul class="list">
+            <li>Este portal solo permite acceso a <span class="monos">pago</span> y <span class="monos">soporte</span> hasta regularizar.</li>
+            <li>Una vez acreditado el pago, la navegación se habilita automáticamente.</li>
+            <li id="statusLine">Estado: <span class="monos">Suspendido</span></li>
+          </ul>
+          <div class="hint">ID cliente y monto se pueden enviar en la URL para personalizar el aviso.</div>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div>© <span id="year"></span> <span id="brandFoot">Tu Empresa</span>. Todos los derechos reservados.</div>
+      <div class="tag">Portal de aviso</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      // --- Config vía querystring ---
+      const qs = new URLSearchParams(location.search);
+      const empresa = qs.get("empresa") || "Geo‑Sistemas Internet";
+      const logo = qs.get("logo") || ""; // URL del logo (opcional)
+      const pago = qs.get("pago") || ""; // URL a pasarela de pago
+      const whatsapp = qs.get("whatsapp") || ""; // 549261XXXXXXX
+      const cliente = qs.get("cliente") || ""; // ID/Nombre cliente
+      const monto = qs.get("monto") || ""; // Monto adeudado, ej: 25.000
+      const statusUrl = qs.get("status_url") || ""; // Endpoint opcional para verificar estado (pagado/suspendido)
+      const autoRefresh = qs.get("autorefresh") === "1"; // si '1', consulta status_url cada 20s
+
+      // --- DOM ---
+      const $ = (id) => document.getElementById(id);
+      $("brand").textContent = empresa;
+      $("brandFoot").textContent = empresa;
+      $("year").textContent = new Date().getFullYear();
+
+      const $logo = $("logo");
+      if (logo) {
+        $logo.src = logo;
+        $logo.style.display = "block";
+      } else {
+        $logo.style.display = "none";
+      }
+
+      const $btnPagar = $("btnPagar");
+      if (pago) {
+        $btnPagar.href = pago;
+      } else {
+        $btnPagar.href = "#";
+        $btnPagar.setAttribute("aria-disabled", "true");
+        $btnPagar.style.opacity = .6;
+        $btnPagar.title = "Configure ?pago=URL";
+      }
+
+      const $btnSoporte = $("btnSoporte");
+      if (whatsapp) {
+        $btnSoporte.href = `https://wa.me/${whatsapp}`;
+      } else {
+        $btnSoporte.href = "mailto:soporte@example.com";
+      }
+
+      // Datos de cliente (opcional)
+      if (cliente || monto) {
+        const msg = [
+          cliente ? `Cliente: <strong>${cliente}</strong>` : null,
+          monto ? `Saldo pendiente: <strong>$${monto}</strong>` : null
+        ].filter(Boolean).join(" · ");
+        if (msg) {
+          const el = $("datosCliente");
+          el.innerHTML = msg;
+          el.style.display = "block";
+        }
+      }
+
+      // Botón reintentar
+      $("btnReintentar").addEventListener("click", async () => {
+        // 1) Forzar validación externa si el portal lo permite
+        try {
+          // Intento a endpoints de detección cautiva (si están permitidos)
+          await Promise.race([
+            fetch("http://connectivitycheck.gstatic.com/generate_204", { mode: "no-cors" }),
+            fetch("https://www.msftconnecttest.com/connecttest.txt", { mode: "no-cors" }),
+            new Promise((_, r) => setTimeout(r, 1500))
+          ]);
+        } catch (e) { /* ignorar */ }
+        // 2) Recargar para tomar nuevos permisos si ya está al día
+        location.reload();
+      });
+
+      // Verificación periódica (opcional)
+      async function checkStatus() {
+        if (!statusUrl) return;
+        try {
+          const res = await fetch(statusUrl, { cache: "no-store" });
+          if (res.ok) {
+            const json = await res.json().catch(() => ({}));
+            // Se espera { status: "ok" | "suspendido" }
+            const status = (json.status || "").toLowerCase();
+            if (status.includes("ok") || status.includes("activo") || status.includes("habilitado")) {
+              $("statusLine").innerHTML = 'Estado: <span class="monos" style="background:#052e1a;border-color:#064e3b">Habilitado</span>';
+              // Intentar abrir navegación
+              setTimeout(() => { location.href = "https://www.google.com/"; }, 800);
+              return;
+            }
+          }
+        } catch (_) { /* ignorar */ }
+        // En caso de seguir suspendido:
+        $("statusLine").innerHTML = 'Estado: <span class="monos">Suspendido</span>';
+      }
+
+      if (statusUrl) {
+        checkStatus();
+        if (autoRefresh) setInterval(checkStatus, 20000);
+      }
+    })();
+  </script>
+</body>
+</html>
