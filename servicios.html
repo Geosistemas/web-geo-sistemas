@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Planes - Geo-Sistemas</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        header { background: #002c57; color: white; padding: 1em; text-align: center; }
+        nav { background: #003366; text-align: center; padding: 1em 0; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        main { padding: 20px; background: white; max-width: 1000px; margin: auto; }
+        footer { background: #002c57; color: white; text-align: center; padding: 1em; margin-top: 30px; }
+        .section { margin-bottom: 40px; }
+        * { box-sizing: border-box; }
+        main { line-height: 1.55; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 24px; padding: 1em 12px; }
+        nav a { margin: 0; }
+        nav a:hover, nav a:focus-visible { text-decoration: underline; }
+        .intro { color: #43566a; }
+        .plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+        .plan { border: 1px solid #cbd8e5; border-radius: 10px; padding: 18px 14px; background: #fff; display: flex; flex-direction: column; }
+        .plan.recommended { border: 2px solid #1767ad; padding: 17px 13px; }
+        .plan.retired { background: #f5f6f8; border-color: #d3d8df; }
+        .status { font-size: .78rem; font-weight: bold; letter-spacing: .02em; color: #155b95; min-height: 2.8em; display: flex; align-items: center; }
+        .retired .status { color: #525d69; }
+        .plan h3 { font-size: 1rem; margin: 8px 0 0; color: #003366; }
+        .speed { font-size: 2rem; font-weight: bold; color: #002c57; line-height: 1.2; margin: 5px 0 14px; }
+        .price { font-size: 1.5rem; font-weight: bold; color: #002c57; white-space: nowrap; line-height: 1.2; }
+        .period { font-size: .85rem; color: #43566a; margin: 4px 0 15px; }
+        .devices { font-size: .9rem; font-weight: bold; padding: 10px 0; border-top: 1px solid #dce3eb; color: #003366; }
+        .plan ul { font-size: .88rem; padding-left: 18px; margin: 5px 0 12px; }
+        .plan li { margin-bottom: 8px; }
+        .plan-note { font-size: .83rem; color: #43566a; margin: auto 0 0; padding-top: 10px; border-top: 1px solid #dce3eb; }
+        .notice { padding: 18px 20px; background: #f0f5fa; border-left: 4px solid #1767ad; border-radius: 4px; margin-top: 25px; }
+        .notice h3 { margin: 0 0 8px; color: #002c57; font-size: 1.1rem; }
+        .notice p { margin: 8px 0; }
+        @media (max-width: 850px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 480px) { main { padding: 16px; } .plans { grid-template-columns: 1fr; } .status { min-height: 0; } nav { gap: 10px 16px; } }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Planes de Servicio</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="planes.html">Planes</a>
+        <a href="https://bills25.ispcube.com/" target="_blank" rel="noopener noreferrer">Descargar Facturas</a>
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="terminos.html">Términos y Condiciones</a>
+    </nav>
+    <main>
+        <section class="section">
+            <h2>Instalación</h2>
+            <p>La instalación se realiza en modalidad de <strong>comodato</strong>, e incluye enlace inalámbrico Mikrotik, configuración y soporte técnico. El cliente es responsable por el router, transformadores PoE y cables.</p>
+            <p><strong>Costo actual de instalación:</strong> $98.000 — consultar promociones vigentes.</p>
+        </section>
+        <section class="section" aria-labelledby="titulo-planes">
+            <h2 id="titulo-planes">Planes de Internet Domiciliario</h2>
+            <p class="intro">Conectividad inalámbrica para hogares en zonas rurales y áreas de difícil acceso. Elegí tu plan según la cantidad de dispositivos y el uso habitual de internet. Las nuevas instalaciones están sujetas a verificación de cobertura.</p>
+            <div class="plans">
+                <article class="plan retired">
+                    <div class="status">DESCONTINUADO</div>
+                    <h3>Plan Básico</h3>
+                    <div class="speed">5 Mbps</div>
+                    <div class="price">$18.900</div>
+                    <div class="period">por mes</div>
+                    <div class="devices">2 a 3 dispositivos</div>
+                    <ul>
+                        <li>WhatsApp, correo electrónico y navegación básica.</li>
+                        <li>Uso liviano de redes sociales.</li>
+                        <li>No recomendado para Smart TV ni streaming de video de forma habitual.</li>
+                    </ul>
+                    <p class="plan-note">Exclusivo para clientes que ya tienen este plan. No disponible para nuevas contrataciones.</p>
+                </article>
+                <article class="plan">
+                    <div class="status">DISPONIBLE</div>
+                    <h3>Plan Económico</h3>
+                    <div class="speed">8 Mbps</div>
+                    <div class="price">$22.990</div>
+                    <div class="period">por mes</div>
+                    <div class="devices">Hasta 5 dispositivos</div>
+                    <ul>
+                        <li>Mensajería, redes sociales y navegación.</li>
+                        <li>Video en HD (720p) con consumo moderado.</li>
+                        <li>Una Smart TV en HD, limitando otros consumos intensivos.</li>
+                    </ul>
+                    <p class="plan-note">Ideal para hogares con uso moderado de internet.</p>
+                </article>
+                <article class="plan recommended">
+                    <div class="status">DISPONIBLE · RECOMENDADO</div>
+                    <h3>Plan Estándar</h3>
+                    <div class="speed">10 Mbps</div>
+                    <div class="price">$24.900</div>
+                    <div class="period">por mes</div>
+                    <div class="devices">Hasta 8 dispositivos</div>
+                    <ul>
+                        <li>Uso familiar, navegación y redes sociales.</li>
+                        <li>Una Smart TV en HD con otros dispositivos de consumo moderado.</li>
+                        <li>Clases virtuales y videollamadas, según el consumo simultáneo.</li>
+                    </ul>
+                    <p class="plan-note">Mayor margen para compartir la conexión en el hogar.</p>
+                </article>
+                <article class="plan">
+                    <div class="status">DISPONIBLE</div>
+                    <h3>Plan Familiar</h3>
+                    <div class="speed">15 Mbps</div>
+                    <div class="price">$27.900</div>
+                    <div class="period">por mes</div>
+                    <div class="devices">Hasta 10 dispositivos</div>
+                    <ul>
+                        <li>Uso familiar con más dispositivos conectados.</li>
+                        <li>Streaming Full HD (1080p) con consumo moderado.</li>
+                        <li>Teletrabajo, clases virtuales y redes sociales.</li>
+                    </ul>
+                    <p class="plan-note">Mayor capacidad para hogares con más actividad en línea.</p>
+                </article>
+            </div>
+            <aside class="notice" aria-labelledby="titulo-consumo">
+                <h3 id="titulo-consumo">Importante: cantidad de dispositivos y consumo de internet</h3>
+                <p>La cantidad de dispositivos indicada es orientativa y corresponde a un uso moderado. La velocidad de cada plan es de hasta los Mbps indicados y se comparte entre todos los dispositivos conectados; no corresponde a una velocidad individual por dispositivo.</p>
+                <p>Los videos, las Smart TV, las cámaras de seguridad, las descargas y las actualizaciones automáticas pueden consumir gran parte del ancho de banda. La reproducción de video puede generar un consumo elevado incluso desde un celular.</p>
+                <p><strong>Video en 4K (Ultra HD):</strong> ninguno de estos planes está recomendado para este tipo de reproducción. Para evitar interrupciones y saturación de la conexión, recomendamos ajustar manualmente la calidad de video a HD (720p) o Full HD (1080p), según el plan y el consumo simultáneo.</p>
+                <p>La cantidad de dispositivos conectados no garantiza que todos puedan realizar actividades de alto consumo al mismo tiempo.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Geo-Sistemas. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
